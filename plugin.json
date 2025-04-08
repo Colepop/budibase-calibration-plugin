@@ -1,0 +1,16 @@
+{
+  "name": "calibration-trigger",
+  "version": "1.0.0",
+  "description": "Triggers Raspberry Pi calibration via Replit API",
+  "author": "Your Name",
+  "type": "action",
+  "main": "index.js",
+  "inputs": [
+    {
+      "name": "url",
+      "type": "string",
+      "displayName": "Replit URL",
+      "required": true
+    }
+  ]
+}
