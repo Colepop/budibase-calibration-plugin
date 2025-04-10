@@ -1,20 +1,32 @@
-async function handler({ url }) {
+const { NodeSSH } = require("node-ssh");
+const ssh = new NodeSSH();
+
+module.exports = async ({ variables }) => {
+  const { host, username, password } = variables;
+  
   try {
-    const response = await fetch(url, {
-      method: "POST"
+    // Connect to the Raspberry Pi via SSH
+    await ssh.connect({
+      host: host,
+      username: username,
+      password: password
     });
 
-    const result = await response.json();
+    // Run the command/script on the Raspberry Pi
+    const result = await ssh.execCommand("python3 /home/pi/myscript.py");
+
+    // Return success message and any output from the script
     return {
       success: true,
-      data: result
+      status: `Script started successfully: ${result.stdout}`
     };
-  } catch (error) {
+  } catch (err) {
     return {
       success: false,
-      error: error.message
+      status: `Error: ${err.message}`
     };
+  } finally {
+    ssh.dispose();
   }
-}
+};
 
-module.exports = { handler };
