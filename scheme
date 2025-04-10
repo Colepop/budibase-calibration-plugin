@@ -1,0 +1,36 @@
+{
+  "name": "raspberry-pi-ssh-plugin",
+  "description": "A plugin to trigger a script on a Raspberry Pi via SSH.",
+  "type": "action",
+  "inputs": [
+    {
+      "name": "host",
+      "type": "string",
+      "label": "Raspberry Pi IP Address",
+      "description": "The IP address of the Raspberry Pi to connect to.",
+      "required": true
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "label": "SSH Username",
+      "description": "The SSH username for the Raspberry Pi.",
+      "required": true
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "label": "SSH Password",
+      "description": "The SSH password for the Raspberry Pi.",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "status",
+      "type": "string",
+      "label": "Status",
+      "description": "Status message returned after triggering the SSH script."
+    }
+  ]
+}
