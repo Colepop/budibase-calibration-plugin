@@ -1,14 +1,16 @@
 {
   "name": "calibration-plugin",
-  "version": "0.0.1",
-  "description": "Triggers Raspberry Pi calibration via SSH",
-  "type": "action",
-  "author": {
-    "name": "Colepop",
-    "email": "Laprarie7@gmail.com"
-  },
-  "icon": "PlayCircle",
-  "permissions": [],
-  "entry": "index.js"
+  "version": "0.1.0",
+  "description": "Plugin to trigger Raspberry Pi calibration via SSH",
+  "budibase": {
+    "type": "action",
+    "author": {
+      "name": "Colepop",
+      "email": "colepop@example.com"
+    },
+    "icon": "PlayCircle",
+    "permissions": [],
+    "entry": "index.js"
+  }
 }
 
