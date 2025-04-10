@@ -1,16 +1,14 @@
 {
-  "name": "calibration-trigger",
-  "version": "1.0.0",
-  "description": "Triggers Raspberry Pi calibration via Replit API",
-  "author": "Your Name",
+  "name": "calibration-plugin",
+  "version": "0.0.1",
+  "description": "Triggers Raspberry Pi calibration via SSH",
   "type": "action",
-  "main": "index.js",
-  "inputs": [
-    {
-      "name": "url",
-      "type": "string",
-      "displayName": "Replit URL",
-      "required": true
-    }
-  ]
+  "author": {
+    "name": "Colepop",
+    "email": "your@email.com"
+  },
+  "icon": "PlayCircle",
+  "permissions": [],
+  "entry": "index.js"
 }
+
