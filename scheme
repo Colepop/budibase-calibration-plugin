@@ -32,5 +32,6 @@
       "label": "Status",
       "description": "Status message returned after triggering the SSH script."
     }
-  ]
+  ],
+  "version"; "1.0.0"
 }
