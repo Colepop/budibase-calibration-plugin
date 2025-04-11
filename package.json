@@ -1,36 +1,16 @@
 {
   "name": "raspberry-pi-ssh-plugin",
+  "version": "1.0.0",
   "description": "A plugin to trigger a script on a Raspberry Pi via SSH.",
-  "type": "action",
-  "inputs": [
-    {
-      "name": "host",
-      "type": "string",
-      "label": "Raspberry Pi IP Address",
-      "description": "The IP address of the Raspberry Pi.",
-      "required": true
-    },
-    {
-      "name": "username",
-      "type": "string",
-      "label": "SSH Username",
-      "description": "SSH username for the Raspberry Pi.",
-      "required": true
-    },
-    {
-      "name": "password",
-      "type": "string",
-      "label": "SSH Password",
-      "description": "SSH password for the Raspberry Pi.",
-      "required": true
-    }
-  ],
-  "outputs": [
-    {
-      "name": "status",
-      "type": "string",
-      "label": "Status",
-      "description": "Status message after triggering the SSH script."
-    }
-  ]
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["budibase", "plugin", "ssh", "raspberry-pi"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "node-ssh": "^13.1.0"
+  }
 }
+
